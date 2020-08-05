@@ -129,7 +129,7 @@ int temperature_ds18b20_set_cb_by_addr_2(uint32_t addr0, uint32_t addr1, tempera
 
 int temperature_ds18b20_get_addr_by_id_2(int8_t id, uint32_t *addr0, uint32_t *addr1)
 {
-  if(id<MAX_SENSORS) {
+  if(id<MAX_SENSORS && _temperature_ds18b20_data_2[id].status!=TEMP_NOT_SET) {
      *addr0=_temperature_ds18b20_data_2[id].addr0;
      *addr1=_temperature_ds18b20_data_2[id].addr1;
      return 1;
