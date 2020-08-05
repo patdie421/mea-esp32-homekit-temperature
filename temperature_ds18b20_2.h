@@ -7,7 +7,7 @@
 #define TEMP_NOT_SET 3
 #define TEMP_NOT_READ 99
 
-typedef void (*temperature_ds18b20_callback_t)(float value, float prev, void *userdata);
+typedef void (*temperature_ds18b20_callback_2_t)(float value, float prev, void *userdata);
 
 struct temperature_ds18b20_data_2_s {
    uint32_t addr0;
